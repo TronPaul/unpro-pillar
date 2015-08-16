@@ -1,7 +1,6 @@
 base:
   '*':
     - users
-  'not G@domain:ec2.internal':
     - sensu
   'domain:ec2.internal':
     - match: grain
@@ -26,3 +25,12 @@ base:
     - nfs
   'fednet':
     - nfs
+production:
+  '*':
+    - sensu
+  'roles:rabbitmq':
+    - match: grain
+    - rabbitmq
+  'roles:irc_bot':
+    - match: grain
+    - lazybot

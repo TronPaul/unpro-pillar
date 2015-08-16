@@ -1,6 +1,6 @@
 openvpn:
   server:
-    vpn.teamunpro.com:
+    site-to-site:
       port: 8001
       remote: teamunpro.ddns.net
       float: True
