@@ -1,7 +1,8 @@
 base:
   '*':
     - users
-  '* and and G@virtual:VirtualBox':
+  '* and G@virtual:VirtualBox':
+    - match: compound
     - sensu
   'domain:ec2.internal':
     - match: grain
