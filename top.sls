@@ -1,8 +1,7 @@
 base:
-  '*':
-    - users
   '* and G@virtual:VirtualBox':
     - match: compound
+    - users
     - sensu
   'domain:ec2.internal':
     - match: grain
@@ -29,6 +28,7 @@ base:
     - nfs
 production:
   '*':
+    - users
     - sensu
   'roles:rabbitmq':
     - match: grain
