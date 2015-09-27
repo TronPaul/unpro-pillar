@@ -1,7 +1,8 @@
 base:
+  '*':
+    - users
   '* and G@virtual:VirtualBox':
     - match: compound
-    - users
     - sensu
   'domain:ec2.internal':
     - match: grain
@@ -26,13 +27,3 @@ base:
     - nfs
   'fednet':
     - nfs
-production:
-  '*':
-    - users
-    - sensu
-  'roles:rabbitmq':
-    - match: grain
-    - rabbitmq
-  'roles:irc_bot':
-    - match: grain
-    - lazybot
