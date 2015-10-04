@@ -16,9 +16,6 @@ base:
   'roles:vpn_server':
     - match: grain
     - vpn-server
-  'roles:vpn_client':
-    - match: grain
-    - openvpn-client
   'roles:torrentserver':
     - match: grain
     - deluge
